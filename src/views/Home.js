@@ -23,6 +23,7 @@ import React from "react"
 
 // core components
 import ColorNavbar from "components/Navbars/ColorNavbar.js"
+import ScrollDown from "components/ScrollDown/ScrollDown.js"
 import PresentationHeader from "components/Headers/PresentationHeader.js"
 import DemoFooter from "components/Footers/DemoFooter.js"
 
@@ -81,6 +82,7 @@ class Home extends React.Component {
       <>
         <ColorNavbar />
         <div className="wrapper" ref="wrapper">
+          {/* Page Header */}
           <div className="page-header">
             {/*<div
               className="page-header-image"
@@ -147,6 +149,7 @@ class Home extends React.Component {
               </Row>
             </Container>
           </div>
+          {/* Section 1 */}
           <div className="features-1">
             <section className="section section-lg">
               <img
@@ -163,9 +166,9 @@ class Home extends React.Component {
                 <Row>
                   <Col className="ml-auto mr-auto" md="8">
                     <Badge color="primary" pill>
-                      Insight
+                      Services
                     </Badge>
-                    <h1 className="title">Full-System Tuning</h1>
+                    <h1 className="title">Step Up Your Game</h1>
                   </Col>
                 </Row>
                 <Row>
@@ -186,6 +189,14 @@ class Home extends React.Component {
                         you through the process of getting the most out of your
                         computer hardware.
                       </p>
+                      <Button
+                        className="btn-link"
+                        color="primary"
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                      >
+                        Explore now <i className="tim-icons icon-minimal-right" />
+                      </Button>
                     </div>
                   </Col>
                   <Col md="4">
@@ -203,8 +214,18 @@ class Home extends React.Component {
                       </h4>
                       <hr className="line-warning" />
                       <p className="description">
-                        Submit your clips and follow along as we focus on the mechanics and in-game decision making that will improve your game.
+                        Submit your clips and follow along as we focus on the
+                        mechanics and in-game decision making that will improve
+                        your game.
                       </p>
+                      <Button
+                        className="btn-link"
+                        color="warning"
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                      >
+                        Explore now <i className="tim-icons icon-minimal-right" />
+                      </Button>
                     </div>
                   </Col>
                   <Col md="4">
@@ -220,8 +241,18 @@ class Home extends React.Component {
                       <h4 className="info-title">Stay Informed</h4>
                       <hr className="line-success" />
                       <p className="description">
-                        Your one stop for all the latest gaming peripherals and overclocking news to help you stay ahead of the competition.
+                        Your one stop for all the latest gaming peripherals and
+                        overclocking news to help you stay ahead of the
+                        competition.
                       </p>
+                      <Button
+                        className="btn-link"
+                        color="success"
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                      >
+                        Explore now <i className="tim-icons icon-minimal-right" />
+                      </Button>
                     </div>
                   </Col>
                 </Row>
