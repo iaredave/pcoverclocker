@@ -154,74 +154,78 @@ class Home extends React.Component {
                 className="path"
                 src={require("assets/img/path4.png")}
               />
-            <Container>
-              <img
-                alt="..."
-                className="path"
-                src={require("assets/img/path4.png")}
-              />
-              <Row>
-                <Col className="ml-auto mr-auto" md="8">
-                  <Badge color="primary" pill>
-                    Insight
-                  </Badge>
-                  <h1 className="title">Full-System Overclock Tuning</h1>
-                </Col>
-              </Row>
-              <Row>
-                <Col md="4">
-                  <div className="info info-hover">
-                    <div className="icon icon-primary">
-                      <img
-                        alt="..."
-                        className="bg-blob"
-                        src={require("assets/img/feature-blob/primary.png")}
-                      />
-                      <i className="tim-icons icon-user-run" />
+              <Container>
+                <img
+                  alt="..."
+                  className="path"
+                  src={require("assets/img/path4.png")}
+                />
+                <Row>
+                  <Col className="ml-auto mr-auto" md="8">
+                    <Badge color="primary" pill>
+                      Insight
+                    </Badge>
+                    <h1 className="title">Full-System Tuning</h1>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md="4">
+                    <div className="info info-hover">
+                      <div className="icon icon-primary">
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          src={require("assets/img/feature-blob/primary.png")}
+                        />
+                        <i className="tim-icons icon-settings" />
+                      </div>
+                      <h4 className="info-title">Step-By-Step Overclocking</h4>
+                      <hr className="line-primary" />
+                      <p className="description">
+                        From CPU to GPU and everything in between we will guide
+                        you through the process of getting the most out of your
+                        computer hardware.
+                      </p>
                     </div>
-                    <h4 className="info-title">Social Conversations</h4>
-                    <p className="description">
-                      Gain access to the demographics, psychographics, and
-                      location of unique people.
-                    </p>
-                  </div>
-                </Col>
-                <Col md="4">
-                  <div className="info info-hover">
-                    <div className="icon icon-success">
-                      <img
-                        alt="..."
-                        className="bg-blob"
-                        src={require("assets/img/feature-blob/success.png")}
-                      />
-                      <i className="tim-icons icon-atom" />
+                  </Col>
+                  <Col md="4">
+                    <div className="info info-hover">
+                      <div className="icon icon-warning">
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          src={require("assets/img/feature-blob/warning.png")}
+                        />
+                        <i className="tim-icons icon-controller" />
+                      </div>
+                      <h4 className="info-title">
+                        First Person Shooter Coaching
+                      </h4>
+                      <hr className="line-warning" />
+                      <p className="description">
+                        Submit your clips and follow along as we focus on the mechanics and in-game decision making that will improve your game.
+                      </p>
                     </div>
-                    <h4 className="info-title">Analyze Performance</h4>
-                    <p className="description">
-                      Unify data from Facebook, Instagram, Twitter, LinkedIn,
-                      and Youtube to gain rich insights.
-                    </p>
-                  </div>
-                </Col>
-                <Col md="4">
-                  <div className="info info-hover">
-                    <div className="icon icon-warning">
-                      <img
-                        alt="..."
-                        className="bg-blob"
-                        src={require("assets/img/feature-blob/warning.png")}
-                      />
-                      <i className="tim-icons icon-gift-2" />
+                  </Col>
+                  <Col md="4">
+                    <div className="info info-hover">
+                      <div className="icon icon-success">
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          src={require("assets/img/feature-blob/success.png")}
+                        />
+                        <i className="tim-icons icon-paper" />
+                      </div>
+                      <h4 className="info-title">Stay Informed</h4>
+                      <hr className="line-success" />
+                      <p className="description">
+                        Your one stop for all the latest gaming peripherals and overclocking news to help you stay ahead of the competition.
+                      </p>
                     </div>
-                    <h4 className="info-title">Measure Conversions</h4>
-                    <p className="description">
-                      Track actions taken on your website, understand the impact
-                      on your bottom line.
-                    </p>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
+                  </Col>
+                </Row>
+              </Container>
             </section>
           </div>
         </div>
