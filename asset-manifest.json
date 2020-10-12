@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pcoverclocker/static/css/main.3cab7d15.chunk.css",
-    "main.js": "/pcoverclocker/static/js/main.7a64cfb2.chunk.js",
-    "main.js.map": "/pcoverclocker/static/js/main.7a64cfb2.chunk.js.map",
+    "main.js": "/pcoverclocker/static/js/main.61bbd68c.chunk.js",
+    "main.js.map": "/pcoverclocker/static/js/main.61bbd68c.chunk.js.map",
     "runtime-main.js": "/pcoverclocker/static/js/runtime-main.06b2a02c.js",
     "runtime-main.js.map": "/pcoverclocker/static/js/runtime-main.06b2a02c.js.map",
     "static/js/2.5ff6dc38.chunk.js": "/pcoverclocker/static/js/2.5ff6dc38.chunk.js",
     "static/js/2.5ff6dc38.chunk.js.map": "/pcoverclocker/static/js/2.5ff6dc38.chunk.js.map",
     "index.html": "/pcoverclocker/index.html",
-    "precache-manifest.d6ea08e62dc88ad396e9d20fb2c7636b.js": "/pcoverclocker/precache-manifest.d6ea08e62dc88ad396e9d20fb2c7636b.js",
+    "precache-manifest.97907804a1fef0e8090d3f71e12a534b.js": "/pcoverclocker/precache-manifest.97907804a1fef0e8090d3f71e12a534b.js",
     "service-worker.js": "/pcoverclocker/service-worker.js",
     "static/css/main.3cab7d15.chunk.css.map": "/pcoverclocker/static/css/main.3cab7d15.chunk.css.map",
     "static/js/2.5ff6dc38.chunk.js.LICENSE.txt": "/pcoverclocker/static/js/2.5ff6dc38.chunk.js.LICENSE.txt",
@@ -103,6 +103,6 @@
     "static/js/runtime-main.06b2a02c.js",
     "static/js/2.5ff6dc38.chunk.js",
     "static/css/main.3cab7d15.chunk.css",
-    "static/js/main.7a64cfb2.chunk.js"
+    "static/js/main.61bbd68c.chunk.js"
   ]
 }

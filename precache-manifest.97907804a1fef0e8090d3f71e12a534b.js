@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "65a83224527e3715116677c02c7ce638",
+    "revision": "d472e140a75f393e429bbfc741cb2eb8",
     "url": "/pcoverclocker/index.html"
   },
   {
-    "revision": "b2007d5c9fd34392a3d6",
+    "revision": "b9af154e701ad17865df",
     "url": "/pcoverclocker/static/css/main.3cab7d15.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pcoverclocker/static/js/2.5ff6dc38.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b2007d5c9fd34392a3d6",
-    "url": "/pcoverclocker/static/js/main.7a64cfb2.chunk.js"
+    "revision": "b9af154e701ad17865df",
+    "url": "/pcoverclocker/static/js/main.61bbd68c.chunk.js"
   },
   {
     "revision": "5002c775443574a74200",
