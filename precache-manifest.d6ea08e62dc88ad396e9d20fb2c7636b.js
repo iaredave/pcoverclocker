@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "76220bffd455fbfc48a32a52a641c4ae",
+    "revision": "65a83224527e3715116677c02c7ce638",
     "url": "/pcoverclocker/index.html"
   },
   {
-    "revision": "cf5d264557c37f397200",
+    "revision": "b2007d5c9fd34392a3d6",
     "url": "/pcoverclocker/static/css/main.3cab7d15.chunk.css"
   },
   {
-    "revision": "2fb3d940051d33476a37",
-    "url": "/pcoverclocker/static/js/2.30a2ac67.chunk.js"
+    "revision": "0d2b273469d52f0a8230",
+    "url": "/pcoverclocker/static/js/2.5ff6dc38.chunk.js"
   },
   {
     "revision": "fbbfe9ed4dc77af342a4a500830ec9a4",
-    "url": "/pcoverclocker/static/js/2.30a2ac67.chunk.js.LICENSE.txt"
+    "url": "/pcoverclocker/static/js/2.5ff6dc38.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cf5d264557c37f397200",
-    "url": "/pcoverclocker/static/js/main.49dbc7c5.chunk.js"
+    "revision": "b2007d5c9fd34392a3d6",
+    "url": "/pcoverclocker/static/js/main.7a64cfb2.chunk.js"
   },
   {
-    "revision": "2b9e3c85dc8dae642812",
-    "url": "/pcoverclocker/static/js/runtime-main.b40855af.js"
+    "revision": "5002c775443574a74200",
+    "url": "/pcoverclocker/static/js/runtime-main.06b2a02c.js"
   },
   {
     "revision": "0bf2cfe5af714af67531c4409cf81568",

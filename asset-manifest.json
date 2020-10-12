@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/pcoverclocker/static/css/main.3cab7d15.chunk.css",
-    "main.js": "/pcoverclocker/static/js/main.49dbc7c5.chunk.js",
-    "main.js.map": "/pcoverclocker/static/js/main.49dbc7c5.chunk.js.map",
-    "runtime-main.js": "/pcoverclocker/static/js/runtime-main.b40855af.js",
-    "runtime-main.js.map": "/pcoverclocker/static/js/runtime-main.b40855af.js.map",
-    "static/js/2.30a2ac67.chunk.js": "/pcoverclocker/static/js/2.30a2ac67.chunk.js",
-    "static/js/2.30a2ac67.chunk.js.map": "/pcoverclocker/static/js/2.30a2ac67.chunk.js.map",
+    "main.js": "/pcoverclocker/static/js/main.7a64cfb2.chunk.js",
+    "main.js.map": "/pcoverclocker/static/js/main.7a64cfb2.chunk.js.map",
+    "runtime-main.js": "/pcoverclocker/static/js/runtime-main.06b2a02c.js",
+    "runtime-main.js.map": "/pcoverclocker/static/js/runtime-main.06b2a02c.js.map",
+    "static/js/2.5ff6dc38.chunk.js": "/pcoverclocker/static/js/2.5ff6dc38.chunk.js",
+    "static/js/2.5ff6dc38.chunk.js.map": "/pcoverclocker/static/js/2.5ff6dc38.chunk.js.map",
     "index.html": "/pcoverclocker/index.html",
-    "precache-manifest.a8edc748446cacda4d239e5409943211.js": "/pcoverclocker/precache-manifest.a8edc748446cacda4d239e5409943211.js",
+    "precache-manifest.d6ea08e62dc88ad396e9d20fb2c7636b.js": "/pcoverclocker/precache-manifest.d6ea08e62dc88ad396e9d20fb2c7636b.js",
     "service-worker.js": "/pcoverclocker/service-worker.js",
     "static/css/main.3cab7d15.chunk.css.map": "/pcoverclocker/static/css/main.3cab7d15.chunk.css.map",
-    "static/js/2.30a2ac67.chunk.js.LICENSE.txt": "/pcoverclocker/static/js/2.30a2ac67.chunk.js.LICENSE.txt",
+    "static/js/2.5ff6dc38.chunk.js.LICENSE.txt": "/pcoverclocker/static/js/2.5ff6dc38.chunk.js.LICENSE.txt",
     "static/media/1234.png": "/pcoverclocker/static/media/1234.0bf2cfe5.png",
     "static/media/404-error.png": "/pcoverclocker/static/media/404-error.a9d51937.png",
     "static/media/500-error.png": "/pcoverclocker/static/media/500-error.26ac0aba.png",
@@ -100,9 +100,9 @@
     "static/media/tom-klein.jpg": "/pcoverclocker/static/media/tom-klein.edff6a9b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b40855af.js",
-    "static/js/2.30a2ac67.chunk.js",
+    "static/js/runtime-main.06b2a02c.js",
+    "static/js/2.5ff6dc38.chunk.js",
     "static/css/main.3cab7d15.chunk.css",
-    "static/js/main.49dbc7c5.chunk.js"
+    "static/js/main.7a64cfb2.chunk.js"
   ]
 }
