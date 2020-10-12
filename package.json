@@ -1,4 +1,5 @@
 {
+  "homepage": "http://iaredave.github.io/pcoverclocker",
   "name": "blk-design-system-pro-react",
   "version": "1.1.0",
   "private": true,
@@ -35,9 +36,12 @@
     "@types/googlemaps": "3.39.3",
     "@types/markerclustererplus": "2.1.33",
     "@types/react": "16.9.34",
+    "gh-pages": "^3.1.0",
     "typescript": "3.8.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
