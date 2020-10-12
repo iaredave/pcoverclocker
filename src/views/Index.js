@@ -17,7 +17,7 @@
 import React from "react";
 
 // core components
-import ColorNavbar from "components/Navbars/ColorNavbar.js";
+import ColorNavbar from "components/ColorNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 

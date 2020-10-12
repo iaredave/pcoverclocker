@@ -20,7 +20,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 
 // core components
-import ColorNavbar from "components/Navbars/ColorNavbar.js";
+import ColorNavbar from "components/ColorNavbar.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
 class Error400 extends React.Component {

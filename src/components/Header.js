@@ -1,6 +1,6 @@
-import React, { Component } from "react"
-import { Link } from "react-router-dom"
-import { connect } from "react-redux"
+import React, {Component} from "react"
+import {Link} from "react-router-dom"
+import {connect} from "react-redux"
 
 import * as actions from "../actions"
 
@@ -18,7 +18,7 @@ class Header extends Component {
     return (
       <nav
         className="navbar navbar-expand-lg navbar-dark bg-dark"
-        style={{ marginBottom: "30px" }}
+        style={{marginBottom: "30px"}}
       >
         <Link className="navbar-brand" to="/">
           CodeWorkr API Auth
@@ -48,7 +48,7 @@ class Header extends Component {
                     <Link className="nav-link" to="/signin">
                       Sign In
                     </Link>
-                  </li>
+                  </li>,
                 ]
               : null}
 
@@ -68,11 +68,8 @@ class Header extends Component {
 
 function mapStateToProps(state) {
   return {
-    isAuth: state.auth.isAuthenticated
+    isAuth: state.auth.isAuthenticated,
   }
 }
 
-export default connect(
-  mapStateToProps,
-  actions
-)(Header)
+export default connect(mapStateToProps, actions)(Header)

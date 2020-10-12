@@ -22,7 +22,7 @@ import React from "react"
 // } from "reactstrap";
 
 // core components
-import ColorNavbar from "components/Navbars/ColorNavbar.js"
+import ColorNavbar from "components/ColorNavbar.js"
 import ScrollDown from "components/ScrollDown/ScrollDown.js"
 import PresentationHeader from "components/Headers/PresentationHeader.js"
 import DemoFooter from "components/Footers/DemoFooter.js"
@@ -62,6 +62,8 @@ import {
   NavLink,
   Badge,
 } from "reactstrap"
+import {connect} from "react-redux"
+import * as actions from "../actions"
 
 const data = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -386,4 +388,11 @@ class LandingPage extends React.Component {
   }
 }
 
-export default LandingPage
+function mapStateToProps(state) {
+  return {}
+}
+
+export default connect(
+  mapStateToProps,
+  actions
+)(LandingPage)

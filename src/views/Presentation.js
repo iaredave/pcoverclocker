@@ -22,7 +22,7 @@ import React from "react";
 // } from "reactstrap";
 
 // core components
-import ColorNavbar from "components/Navbars/ColorNavbar.js";
+import ColorNavbar from "components/ColorNavbar.js";
 import PresentationHeader from "components/Headers/PresentationHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 

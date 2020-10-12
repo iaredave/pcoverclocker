@@ -45,7 +45,7 @@ import {
 } from "reactstrap";
 
 // core components
-import ColorNavbar from "components/Navbars/ColorNavbar.js";
+import ColorNavbar from "components/ColorNavbar.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import ImageUpload from "components/CustomUpload/ImageUpload.js";
 

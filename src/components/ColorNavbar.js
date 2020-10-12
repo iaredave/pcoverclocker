@@ -14,8 +14,12 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"
+import {Link} from "react-router-dom"
+import {connect} from "react-redux"
+
+import * as actions from "../actions"
+
 // reactstrap components
 import {
   Button,
@@ -31,36 +35,44 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
-} from "reactstrap";
+  UncontrolledTooltip,
+} from "reactstrap"
 
 class ColorNavbar extends React.Component {
   state = {
-    navbarColor: "navbar-transparent"
-  };
+    navbarColor: "navbar-transparent",
+  }
+
   componentDidMount() {
-    window.addEventListener("scroll", this.changeNavbarColor);
+    window.addEventListener("scroll", this.changeNavbarColor)
   }
+
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.changeNavbarColor);
+    window.removeEventListener("scroll", this.changeNavbarColor)
   }
+
+  signOut = () => {
+    this.props.signOut()
+  }
+
   changeNavbarColor = () => {
     if (
       document.documentElement.scrollTop > 299 ||
       document.body.scrollTop > 299
     ) {
       this.setState({
-        navbarColor: "bg-info"
-      });
+        navbarColor: "bg-info",
+      })
     } else if (
       document.documentElement.scrollTop < 300 ||
       document.body.scrollTop < 300
     ) {
       this.setState({
-        navbarColor: "navbar-transparent"
-      });
+        navbarColor: "navbar-transparent",
+      })
     }
-  };
+  }
+
   render() {
     return (
       <>
@@ -83,7 +95,7 @@ class ColorNavbar extends React.Component {
               <div className="navbar-collapse-header">
                 <Row>
                   <Col className="collapse-brand" xs="6">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       PC• <span>Overclocker</span>
                     </a>
                   </Col>
@@ -97,50 +109,50 @@ class ColorNavbar extends React.Component {
               <Nav className="ml-auto" navbar>
                 <UncontrolledDropdown nav>
                   <DropdownToggle caret color="default" nav>
-                    <i className="tim-icons icon-app"/>
+                    <i className="tim-icons icon-app" />
                     Services
                   </DropdownToggle>
                   <DropdownMenu className="dropdown-with-icons dropdown-black">
                     <DropdownItem to="/index" tag={Link}>
-                      <i className="tim-icons icon-paper"/>
+                      <i className="tim-icons icon-paper" />
                       GPU/CPU Overclock
                     </DropdownItem>
                     <DropdownItem to="/presentation" tag={Link}>
-                      <i className="tim-icons icon-bullet-list-67"/>
+                      <i className="tim-icons icon-bullet-list-67" />
                       RAM Tuning
                     </DropdownItem>
                     <DropdownItem
                       href="https://demos.creative-tim.com/blk-design-system-pro-react/#/documentation/overview?ref=blkdspr-pages-navbar"
                       target="_blank"
                     >
-                      <i className="tim-icons icon-book-bookmark"/>
+                      <i className="tim-icons icon-book-bookmark" />
                       Game Specific Coaching
                     </DropdownItem>
                     <DropdownItem
                       href="https://demos.creative-tim.com/blk-design-system-pro-react/#/documentation/overview?ref=blkdspr-pages-navbar"
                       target="_blank"
                     >
-                      <i className="tim-icons icon-book-bookmark"/>
+                      <i className="tim-icons icon-book-bookmark" />
                       PC FPS Mechanics Coaching
                     </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
                 <UncontrolledDropdown nav>
                   <DropdownToggle caret color="default" nav>
-                    <i aria-hidden={true} className="tim-icons icon-paper"/>
+                    <i aria-hidden={true} className="tim-icons icon-paper" />
                     <p>Blog</p>
                   </DropdownToggle>
                   <DropdownMenu className="dropdown-black" right>
                     <DropdownItem to="/sections#headers" tag={Link}>
-                      <i className="tim-icons icon-app"/>
+                      <i className="tim-icons icon-app" />
                       PC Peripherals
                     </DropdownItem>
                     <DropdownItem to="/sections#features" tag={Link}>
-                      <i className="tim-icons icon-settings"/>
+                      <i className="tim-icons icon-settings" />
                       Computer Hardware
                     </DropdownItem>
                     <DropdownItem to="/sections#blogs" tag={Link}>
-                      <i className="tim-icons icon-align-left-2"/>
+                      <i className="tim-icons icon-align-left-2" />
                       Gaming Software
                     </DropdownItem>
                   </DropdownMenu>
@@ -169,8 +181,14 @@ class ColorNavbar extends React.Component {
           </Container>
         </Navbar>
       </>
-    );
+    )
   }
 }
 
-export default ColorNavbar;
+function mapStateToProps(state) {
+  return {
+    isAuth: state.auth.isAuthenticated,
+  }
+}
+
+export default connect(mapStateToProps, actions)(ColorNavbar)
