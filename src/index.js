@@ -34,6 +34,7 @@ ReactDOM.render(
         <Route exact path="/signin" component={SignIn} />
         <Route path="/confirmation" component={Confirmation} />
         <Route exact path="/dashboard" component={authGuard(Dashboard)} />
+        <Redirect to="/" />
       </App>
     </BrowserRouter>
   </Provider>,
