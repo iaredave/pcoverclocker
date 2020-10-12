@@ -33,7 +33,6 @@ import AboutUs from "views/examples/AboutUs.js";
 import BlogPost from "views/examples/BlogPost.js";
 import BlogPosts from "views/examples/BlogPosts.js";
 import ContactUs from "views/examples/ContactUs.js";
-import LandingPage from "views/examples/LandingPage.js";
 import Pricing from "views/examples/Pricing.js";
 import Ecommerce from "views/examples/Ecommerce.js";
 import ProductPage from "views/examples/ProductPage.js";
@@ -48,25 +47,22 @@ import InvoicePage from "views/examples/InvoicePage.js";
 import CheckoutPage from "views/examples/CheckoutPage.js";
 import ChatPage from "views/examples/ChatPage.js";
 // my pages
-import Home from "views/Home.js";
+import LandingPage from "views/LandingPage.js";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/index" render={props => <Index {...props} />} />
       <Route
-        path="/home"
-        render={props => <Home {...props} />}
+        path="/landing-page"
+        render={props => <LandingPage {...props} />}
       />
       <Route path="/sections" render={props => <Sections {...props} />} />
       <Route path="/about-us" render={props => <AboutUs {...props} />} />
       <Route path="/blog-post" render={props => <BlogPost {...props} />} />
       <Route path="/blog-posts" render={props => <BlogPosts {...props} />} />
       <Route path="/contact-us" render={props => <ContactUs {...props} />} />
-      <Route
-        path="/landing-page"
-        render={props => <LandingPage {...props} />}
-      />
+
       <Route path="/pricing" render={props => <Pricing {...props} />} />
       <Route path="/ecommerce" render={props => <Ecommerce {...props} />} />
       <Route
@@ -98,7 +94,7 @@ ReactDOM.render(
         render={props => <CheckoutPage {...props} />}
       />
       <Route path="/chat-page" render={props => <ChatPage {...props} />} />
-      <Redirect from="/" to="/home" />
+      <Redirect from="/" to="/landing-page" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
