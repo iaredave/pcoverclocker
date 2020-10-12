@@ -29,12 +29,12 @@ ReactDOM.render(
   <Provider store={createStore(reducers, {}, applyMiddleware(reduxThunk))}>
     <BrowserRouter>
       <App>
-        <Route exact path="/" component={LandingPage} />
+        <Route exact path={process.env.PUBLIC_URL + '/'} component={LandingPage} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/signin" component={SignIn} />
-        <Route path="/confirmation" component={Confirmation} />
+        <Route exact path="/confirmation" component={Confirmation} />
         <Route exact path="/dashboard" component={authGuard(Dashboard)} />
-        <Redirect to="/" />
+        <Redirect to={process.env.PUBLIC_URL + '/'} />
       </App>
     </BrowserRouter>
   </Provider>,
