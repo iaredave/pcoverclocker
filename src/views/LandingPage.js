@@ -27,21 +27,9 @@ import ScrollDown from "components/ScrollDown/ScrollDown.js"
 import PresentationHeader from "components/Headers/PresentationHeader.js"
 import DemoFooter from "components/Footers/DemoFooter.js"
 import { Line } from 'react-chartjs-2';
+import { CardImg, CardText } from 'reactstrap';
+import { UncontrolledCarousel } from "reactstrap";
 
-
-// Sections for this page
-// (we've divided this page into multiple react components to make it a bit more readable)
-import Info from "./PresentationSections/Info.js"
-import BasicComponents from "./PresentationSections/BasicComponents.js"
-import Cards from "./PresentationSections/Cards.js"
-import Content from "./PresentationSections/Content.js"
-import Sections from "./PresentationSections/Sections.js"
-import Examples from "./PresentationSections/Examples.js"
-import FreeDemo from "./PresentationSections/FreeDemo.js"
-import Icons from "./PresentationSections/Icons.js"
-import Features from "./PresentationSections/Features.js"
-import Testimonials from "./PresentationSections/Testimonials.js"
-import Pricing from "./PresentationSections/Pricing.js"
 import {
   Col,
   Container,
@@ -65,32 +53,101 @@ import {
 import {connect} from "react-redux"
 import * as actions from "../actions"
 
-const data = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-  datasets: [
-    {
-      label: 'My First dataset',
-      fill: false,
-      lineTension: 0.1,
-      backgroundColor: 'rgba(75,192,192,0.4)',
-      borderColor: 'rgba(75,192,192,1)',
-      borderCapStyle: 'butt',
-      borderDash: [],
-      borderDashOffset: 0.0,
-      borderJoinStyle: 'miter',
-      pointBorderColor: 'rgba(75,192,192,1)',
-      pointBackgroundColor: '#fff',
-      pointBorderWidth: 1,
-      pointHoverRadius: 5,
-      pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-      pointHoverBorderColor: 'rgba(220,220,220,1)',
-      pointHoverBorderWidth: 2,
-      pointRadius: 1,
-      pointHitRadius: 10,
-      data: [65, 59, 80, 81, 56, 55, 40]
-    }
-  ]
+const data = (canvas) => {
+  var ctx = canvas.getContext("2d");
+
+  var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+  gradientStroke.addColorStop(0, '#80b6f4');
+  gradientStroke.addColorStop(1, '#FFFFFF');
+
+  var gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
+  gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
+  gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
+  return {
+    labels: ["60 FPS", "80 FPS", "100 FPS", "120 FPS", "140 FPS", "160 FPS", "180 FPS"],
+    datasets: [{
+      label: "K/D",
+      borderColor: "#f96332",
+      pointBorderColor: "#FFF",
+      pointBackgroundColor: "#f96332",
+      pointBorderWidth: 2,
+      pointHoverRadius: 4,
+      pointHoverBorderWidth: 1,
+      pointRadius: 4,
+      fill: true,
+      backgroundColor: gradientFill,
+      borderWidth: 2,
+      data: [0, 21, 37, 59, 78, 85, 90]
+    }]
+  }
+}
+
+const options = {
+  maintainAspectRatio: false,
+  legend: {
+    display: false
+  },
+  tooltips: {
+    bodySpacing: 4,
+    mode:"nearest",
+    intersect: 0,
+    position:"nearest",
+    xPadding:10,
+    yPadding:10,
+    caretPadding:10
+  },
+  responsive: 1,
+  scales: {
+    yAxes: [{
+      display:0,
+      ticks: {
+        display: false
+      },
+      gridLines: {
+        zeroLineColor: "transparent",
+        drawTicks: false,
+        display: false,
+        drawBorder: false
+      }
+    }],
+    xAxes: [{
+      display:0,
+      ticks: {
+        display: false
+      },
+      gridLines: {
+        zeroLineColor: "transparent",
+        drawTicks: false,
+        display: false,
+        drawBorder: false
+      }
+    }]
+  },
+  layout:{
+    padding:{left:0,right:0,top:15,bottom:15}
+  }
 };
+
+const carouselItems = [
+  {
+    src:
+      require("assets/img/emmanuel-tBG35b1ju2U-unsplash.jpg"),
+    altText: "Slide 1",
+    caption: ""
+  },
+  {
+    src:
+      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1692f925837%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1692f925837%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.45%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
+    altText: "Slide 2",
+    caption: ""
+  },
+  {
+    src:
+      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1692f925838%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1692f925838%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.45%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
+    altText: "Slide 3",
+    caption: ""
+  }
+];
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -108,78 +165,14 @@ class LandingPage extends React.Component {
   componentWillUnmount() {
     document.body.classList.remove("landing-page")
   }
+
   render() {
     return (
       <>
         <ColorNavbar />
         <div className="wrapper" ref="wrapper">
           {/* Page Header */}
-          <div className="page-header">
-            {/*<div
-              className="page-header-image"
-              data-parallax={true}
-              style={{
-                backgroundImage:
-                  "url(" +
-                  require("assets/img/emmanuel-tBG35b1ju2U-unsplash.jpg") +
-                  ")"
-              }}
-            />*/}
-            <img
-              alt="..."
-              className="path"
-              src={require("assets/img/blob.png")}
-            />
-            <img
-              alt="..."
-              className="path2"
-              src={require("assets/img/path2.png")}
-            />
-            <img
-              alt="..."
-              className="shapes triangle"
-              src={require("assets/img/triunghiuri.png")}
-            />
-            <img
-              alt="..."
-              className="shapes wave"
-              style={{marginLeft: "80%"}}
-              src={require("assets/img/waves.png")}
-            />
-            <img
-              alt="..."
-              className="shapes squares"
-              style={{margin: "50%"}}
-              src={require("assets/img/patrat.png")}
-            />
-            <img
-              alt="..."
-              className="shapes circle"
-              src={require("assets/img/cercuri.png")}
-            />
-            <Container>
-              <Row>
-                <Col className="ml-auto mr-auto text-center" lg="6" md="7">
-                  <h2 className="description">Overclocking &</h2>
-                  <h1 className="title">In-Game Coaching</h1>
-                </Col>
-              </Row>
-              <Row>
-                <Col className="ml-auto mr-auto text-center" lg="6" md="7">
-                  {this.state.fading && (
-                    <Button
-                      className="btn-simple btn-danger"
-                      color="default"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Sign Up Today
-                    </Button>
-                  )}
-                </Col>
-              </Row>
-            </Container>
-          </div>
+            <UncontrolledCarousel items={carouselItems} />
           {/* Section 1 */}
           <div className="features-1">
             <section className="section section-lg">
@@ -291,7 +284,7 @@ class LandingPage extends React.Component {
             </section>
           </div>
           {/*prototype*/}
-          <div className="section section-about-us">
+          <section className="section section-about-us">
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
@@ -304,12 +297,26 @@ class LandingPage extends React.Component {
                     for you with
                     guided voice or video sessions tailored to your specific computer hardware and needs.
                   </h5>
-                  <Line data={data} />
                 </Col>
               </Row>
+              <Col>
+              <Row>
+                <Line data={data} options={options} />
+              </Row>
+              </Col>
               <div className="separator separator-info"></div>
               <div className="section-story-overview">
                 <Row>
+                  <img
+                    alt="..."
+                    className="shapes triangle"
+                    src={require("assets/img/triunghiuri.png")}
+                  />
+                  <img
+                    alt="..."
+                    className="shapes circle"
+                    src={require("assets/img/cercuri.png")}
+                  />
                   <Col md="6">
                     <div
                       className="image-container image-left"
@@ -379,7 +386,7 @@ class LandingPage extends React.Component {
                 </Row>
               </div>
             </Container>
-          </div>
+          </section>
           <DemoFooter />
 
         </div>
